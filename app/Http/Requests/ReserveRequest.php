@@ -21,6 +21,7 @@ class ReserveRequest extends FormRequest
     {
         return [
             'places' => 'required|array',
+            'places.*' => 'integer|gt:0',
             'name' => 'required|string'
         ];
     }
